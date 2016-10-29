@@ -1,0 +1,29 @@
+<div class="container" ng-show="isVisible">
+    <div class="row">
+      <div class="col s12">
+        <h1>Insert postcode or country</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <div class="col m5">
+          <input id="country" ng-model="country" type="text" class="validate">
+          <label for="country">country</label>
+        </div>
+      </div>
+      <div class="input-field">
+        <div class="col m5">
+          <input id="postcode" ng-model="postcode" type="text" class="validate">
+          <label for="postcode">postcode</label>
+        </div>
+      </div>
+      <div class="col m2">
+        <div class="input-field">
+          <a class="waves-effect waves-light btn" ng-click="getLocation()">DISCOVER WEATHER</a>
+        </div>
+      </div>
+      <div class="col s2" ng-show="isResultVisible">
+        <p>->{{resultInfo}}</p>
+      </div>
+    </div>
+</div>

@@ -6,7 +6,7 @@ let mapComponent = {
   restrict: 'E',
   bindings: {},
   template,
-  controller: ['$scope', 'WeatherService', controller],
+  controller: ['$scope', 'WeatherService', 'locationNotifyService', controller],
   scope:{
     getLocation:'='
   }

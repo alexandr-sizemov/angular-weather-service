@@ -14,7 +14,6 @@ describe('Home', () => {
   }));
 
   describe('Module', () => {
-    // top-level specs: i.e., routes, injection, naming
     it('default component should be home', () => {
       $location.url('/');
       $rootScope.$digest();
@@ -23,7 +22,6 @@ describe('Home', () => {
   });
 
   describe('Controller', () => {
-    // controller specs
     let controller;
     beforeEach(() => {
       controller = $componentController('home', {
@@ -31,13 +29,12 @@ describe('Home', () => {
       });
     });
 
-    it('has a name property', () => { // erase if removing this.name from the controller
+    it('has a name property', () => {
       expect(controller).to.have.property('name');
     });
   });
 
   describe('View', () => {
-    // view layer specs.
     let scope, template;
 
     beforeEach(() => {
@@ -46,8 +43,10 @@ describe('Home', () => {
       scope.$apply();
     });
 
-    it('has name in template', () => {
-      expect(template.find('h1').html()).to.eq('Weather');
+    it('should have location-form and map directives', () => {
+      expect(template.find('main')).should.exist
+      expect(template.find('location-form')).should.exist
+      expect(template.find('map')).should.exist
     });
 
   });

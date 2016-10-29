@@ -33,7 +33,7 @@ describe('Weather Service', () => {
       expect(weatherService.token).to.not.be.empty
     });
 
-    describe('call the getWeatherData(map) method', (done) => {
+    describe('on getWeatherData(map) invocation', (done) => {
       beforeEach(() => {
         httpBackend
           .when('GET', 'http://api.openweathermap.org/data/2.5/box/city?bbox=1,44,10,50,8&cluster=yes&appid=47da3950edf0fcef40421e3233676404')
@@ -41,7 +41,7 @@ describe('Weather Service', () => {
           weatherService.getWeatherData(google.maps)
       });
 
-      it('should fill the stationList with markers returned by the openweather api', () => {
+      it('should call openweather api and fill the stationList with markers returned by the openweather api', () => {
         setTimeout(() => {
           expect(weatherService.stationList).to.have.lengthOf(5);
           done();
@@ -51,7 +51,7 @@ describe('Weather Service', () => {
     
     });
 
-    describe('call the clearWeather() method', () => {
+    describe('on clearWeather() invocation', () => {
       beforeEach(() => {
         httpBackend
           .when('GET', 'http://api.openweathermap.org/data/2.5/box/city?bbox=1,44,10,50,8&cluster=yes&appid=47da3950edf0fcef40421e3233676404')

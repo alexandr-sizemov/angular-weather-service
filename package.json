@@ -6,10 +6,12 @@
   "dependencies": {
     "angular": "^1.5.0",
     "angular-ui-router": "^1.0.0-beta.1",
+    "as-popup": "^0.1.1",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",
+    "angular-ui-bootstrap": "^2.2.0",
     "babel-core": "^6.7.7",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-runtime": "^6.7.5",
@@ -44,6 +46,7 @@
     "node-libs-browser": "^0.5.0",
     "raw-loader": "^0.5.1",
     "run-sequence": "^1.1.0",
+    "scss-loader": "0.0.1",
     "style-loader": "^0.12.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
